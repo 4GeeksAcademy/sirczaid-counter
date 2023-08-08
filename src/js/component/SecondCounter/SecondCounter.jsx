@@ -8,11 +8,11 @@ export const SecondCounter = ({ seconds, type }) => {
 	if (type === "hours" && seconds >= 3600) timeFormat = Math.floor((seconds / 60) / 60);
 
 	return (
-		<>
-	    	{ timeFormat >= 10 
-	        	? <span>{timeFormat}</span>
-				: <span>0{timeFormat}</span>
-	    	}
-		</>
+		<div class="sq">
+			{ timeFormat >= 10 
+				? <span class="days bord">{timeFormat}</span> 
+				: <span class="days bord">0{timeFormat}</span>
+			}
+	    </div>
 	);
 }
